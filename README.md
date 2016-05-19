@@ -16,6 +16,6 @@ This repository contains all the ROS workspaces developed for the [MBZIRC](http:
 
 [Savio Pereira](https://github.com/JesusSaves747)
 
-## Installation Instructions
+## Installation Instructions:
+For installation and other instructions please refer each readme file located in each workspace and/or packages.
 
-## Dependencies
