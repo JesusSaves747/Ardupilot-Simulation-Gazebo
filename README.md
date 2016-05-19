@@ -1,14 +1,20 @@
 # mbzirc_ws
 
-This ROS workspace contains all the ROS applications and simulations developed for the [MBZIRC](http://www.mbzirc.com).
+This repository contains all the ROS workspaces developed for the [MBZIRC](http://www.mbzirc.com).
 
-## Maintainers:
+## Workspaces:
+### Challenge-1
 
-Challenge 1:
+### Challenge-2:
 
-Challenge 2:
+### Challenge-3:
 
-Challenge 3: [Murat Ambarkutuk](https://github.com/eroniki), [Mickey Cowden](https://github.com/Mickey13), [Savio Pereira](https://github.com/JesusSaves747)
+#### Maintainers:
+[Murat Ambarkutuk](https://github.com/eroniki)
+
+[Mickey Cowden](https://github.com/Mickey13)
+
+[Savio Pereira](https://github.com/JesusSaves747)
 
 ## Installation Instructions
 
