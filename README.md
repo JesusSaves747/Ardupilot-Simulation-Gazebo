@@ -10,11 +10,6 @@ Challenge 2:
 
 Challenge 3: [Murat Ambarkutuk](https://github.com/eroniki), [Mickey Cowden](https://github.com/Mickey13), [Savio Pereira](https://github.com/JesusSaves747)
 
-## Developers:
-
-
-[Mickey Cowden](https://github.com/eroniki)
-
 ## Installation Instructions
 
 ## Dependencies
