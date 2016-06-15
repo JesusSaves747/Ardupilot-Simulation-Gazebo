@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<launch>
+  <!-- Launch arena -->
+  <include file="$(find mbzirc_gazebo)/launch/arena.launch" />
+
+  <!-- Spawn simulated quadrotor UAVs -->
+  <!-- <include file="$(find mbzirc_gazebo)/launch/spawn_uavs.launch" /> -->
+
+  <!-- <node name="image_view_bottom1" pkg="image_view" type="image_view" args="image:=/uav1/downward_cam/camera/image" />
+  <node name="image_view_bottom2" pkg="image_view" type="image_view" args="image:=/uav2/downward_cam/camera/image" />
+  <node name="image_view_bottom3" pkg="image_view" type="image_view" args="image:=/uav3/downward_cam/camera/image" /> -->
+
+  <!-- <node name="target_detection_uav1" pkg="target_detection" type="image_converter" args="/uav1/downward_cam/camera/image" output="screen" />
+  <node name="target_detection_uav2" pkg="target_detection" type="image_converter" args="/uav2/downward_cam/camera/image" output="screen" />
+  <node name="target_detection_uav3" pkg="target_detection" type="image_converter" args="/uav3/downward_cam/camera/image" output="screen" />
+  <node name="mimic_commands" pkg="collaborative_control" type="mimic_commands.py" />
+
+  <node name="object_localizer" pkg="object_localization" type="localize.py" output="screen" /> -->
+
+</launch>

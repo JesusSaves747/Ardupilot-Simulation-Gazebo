@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<launch>
+  <!-- Start Gazebo with world running -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!-- <arg name="world_name" value="$(find mbzirc_gazebo)/worlds/mbzirc_arena.world" /> -->
+    <arg name="world_name" value="$(find mbzirc_gazebo)/worlds/kentland_farm.world" />
+    <arg name="paused" value="false" />
+    <arg name="debug" value="false" />
+  </include>
+
+  <!-- Spawn targets -->
+  <!-- <include file="$(find mbzirc_gazebo)/launch/spawn_all_small_stationary_targets.launch" /> -->
+  <!-- <include file="$(find mbzirc_gazebo)/launch/spawn_all_small_moving_targets.launch" />
+  <include file="$(find mbzirc_gazebo)/launch/spawn_all_large_stationary_targets.launch" /> -->
+
+  <!-- <group ns="target_group_a3">
+    <include file="$(find mbzirc_gazebo)/launch/spawn_target.launch">
+      <arg name="model" value="$(find mbzirc_gazebo)/urdf/target_small_stationary.urdf.xacro" />
+      <arg name="name" value="target1" />
+      <arg name="x_min" value="0" />
+      <arg name="y_min" value="0" />
+      <arg name="x_max" value="65" />
+      <arg name="y_max" value="-22" />
+      <arg name="ns" value="ns1" />
+    </include>
+  </group>
+  <group ns="target_group_b3">
+    <include file="$(find mbzirc_gazebo)/launch/spawn_target.launch">
+      <arg name="model" value="$(find mbzirc_gazebo)/urdf/target_small_moving.urdf.xacro" />
+      <arg name="name" value="target2" />
+      <arg name="x_min" value="0" />
+      <arg name="y_min" value="0" />
+      <arg name="x_max" value="64" />
+      <arg name="y_max" value="-22" />
+      <arg name="ns" value="ns2" />
+    </include>
+  </group>
+  <group ns="target_group_c3">
+    <include file="$(find mbzirc_gazebo)/launch/spawn_target.launch">
+      <arg name="model" value="$(find mbzirc_gazebo)/urdf/target_large_stationary.urdf.xacro" />
+      <arg name="name" value="target3" />
+      <arg name="x_min" value="0" />
+      <arg name="y_min" value="0" />
+      <arg name="x_max" value="67" />
+      <arg name="y_max" value="-25" />
+      <arg name="ns" value="ns3" />
+    </include>
+  </group> -->
+
+  <!-- <node name="target_mover" pkg="mbzirc_gazebo" type="target_mover.py" args="target11,target12,target13,target14,target15,target16,target17,target18,target19,target20" output="screen" /> -->
+
+</launch>
