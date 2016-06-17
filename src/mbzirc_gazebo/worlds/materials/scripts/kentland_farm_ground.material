@@ -12,7 +12,6 @@ material KentlandFarmGround/Image
       texture_unit
       {
         texture kentland_farm.png
-        rotate 90
       }
     }
   }

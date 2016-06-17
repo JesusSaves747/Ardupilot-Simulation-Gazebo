@@ -3,6 +3,8 @@
   <!-- Launch arena -->
   <include file="$(find mbzirc_gazebo)/launch/arena.launch" />
 
+  <node name="environment_3" pkg="mbzirc_gazebo" type="environment_manager_3.py" output="screen" args="107 53.5 10 10 3" />
+
   <!-- Spawn simulated quadrotor UAVs -->
   <!-- <include file="$(find mbzirc_gazebo)/launch/spawn_uavs.launch" /> -->
 
