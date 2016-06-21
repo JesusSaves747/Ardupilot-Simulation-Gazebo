@@ -32,8 +32,8 @@
             <uri>file://media/materials/scripts/gazebo.material</uri>
             <name>Gazebo/Grey</name>
           </script>
-          <ambient>0.3 0.3 0.3 1</ambient>
-          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <ambient>0.3 0.0 0.0 1</ambient>
+          <diffuse>0.7 0.0 0.0 1</diffuse>
           <specular>0.01 0.01 0.01 1</specular>
           <emissive>0 0 0 1</emissive>
           <shader type='vertex'>
@@ -102,5 +102,6 @@
     </link>
     <static>0</static>
     <allow_auto_disable>1</allow_auto_disable>
+    <plugin name='random_walk' filename='libmbzirc_gazebo.so' />
   </model>
 </sdf>

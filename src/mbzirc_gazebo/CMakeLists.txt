@@ -12,8 +12,11 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
+set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
+find_package(gazebo REQUIRED)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -112,17 +115,22 @@ catkin_package(
 ## Build ##
 ###########
 
+link_directories(${GAZEBO_LIBRARY_DIRS})
+
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 # include_directories(include)
 include_directories(
+  ${Boost_INCLUDE_DIR}
   ${catkin_INCLUDE_DIRS}
+  ${GAZEBO_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
-# add_library(mbzirc_gazebo
-#   src/${PROJECT_NAME}/mbzirc_gazebo.cpp
-# )
+add_library(
+  ${PROJECT_NAME}
+  models/target_small_moving/plugins/random_walk.cpp
+)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -140,6 +148,11 @@ include_directories(
 # target_link_libraries(mbzirc_gazebo_node
 #   ${catkin_LIBRARIES}
 # )
+target_link_libraries(
+  ${PROJECT_NAME}
+  ${catkin_LIBRARIES}
+  ${GAZEBO_LIBRARIES}
+)
 
 #############
 ## Install ##
