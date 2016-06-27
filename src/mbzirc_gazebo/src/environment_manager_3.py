@@ -49,6 +49,8 @@ class Environment:
 
     def spawn_target_bin(self):
         initial_pose = Pose()
+        initial_pose.position.x = -self.max_x + 7
+        initial_pose.position.y = self.max_y - 7
         sdf_model = open(self.package_directory + self.target_bin, 'r').read()
         self.service_proxy('target_bin', sdf_model, 'targets', initial_pose, 'world')
 
