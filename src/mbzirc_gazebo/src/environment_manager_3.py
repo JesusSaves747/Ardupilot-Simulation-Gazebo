@@ -13,6 +13,7 @@ class Environment:
     small_static_target = '/models/target_small_static/model.sdf'
     small_moving_target = '/models/target_small_moving/model.sdf'
     large_target = '/models/target_large/model.sdf'
+    target_bin = '/models/target_bin/model.sdf'
 
     def __init__(self, service_proxy, package_directory, min_x, min_y, max_x, max_y):
         self.service_proxy = service_proxy
@@ -46,6 +47,12 @@ class Environment:
             self.service_proxy('target' + str(self.target_id), sdf_model, 'targets', initial_pose, 'world')
             self.target_id += 1
 
+    def spawn_target_bin(self):
+        initial_pose = Pose()
+        sdf_model = open(self.package_directory + self.target_bin, 'r').read()
+        self.service_proxy('target_bin', sdf_model, 'targets', initial_pose, 'world')
+
+
 if len(sys.argv) == 8:
     x = float(sys.argv[1])
     y = float(sys.argv[2])
@@ -60,4 +67,5 @@ if len(sys.argv) == 8:
     environment.spawn_small_static_targets(n1)
     environment.spawn_small_moving_targets(n2)
     environment.spawn_large_targets(n3)
+    environment.spawn_target_bin()
     rospy.spin()
