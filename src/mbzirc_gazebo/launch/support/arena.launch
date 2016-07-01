@@ -8,6 +8,20 @@
     <arg name="debug" value="false" />
   </include>
 
+
+  <!--
+  <group if="$(arg truck)">
+    <include file="$(find mbzirc_gazebo)/launch/spawn_all_small_stationary_targets.launch" />
+  </group>
+
+  <group if="$(arg wrench_board)">
+
+  </group>
+
+  <group if="$(arg targets)">
+
+  </group> -->
+
   <!-- Spawn targets -->
   <!-- <include file="$(find mbzirc_gazebo)/launch/spawn_all_small_stationary_targets.launch" /> -->
   <!-- <include file="$(find mbzirc_gazebo)/launch/spawn_all_small_moving_targets.launch" />

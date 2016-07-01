@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="start_x1" default="47.0" />
+  <arg name="start_y1" default="-23.0" />
+
+  <!-- Launch UAV -->
+  <include file="$(find mbzirc_gazebo)/launch/support/robot.launch">
+    <arg name="name" value="uav1"/>
+    <arg name="x" value="$(arg start_x1)" />
+    <arg name="y" value="$(arg start_y1)" />
+  </include>
+
+</launch>

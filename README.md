@@ -16,6 +16,10 @@ This repository contains all the ROS source code developed for the [MBZIRC](http
 
 ## Build Worlds
 
+### MBZIRC Arena
+
     rosrun xacro xacro --inorder src/mbzirc_gazebo/worlds/mbzirc_arena.world.xacro > src/mbzirc_gazebo/worlds/mbzirc_arena.world
+
+### Kentland Farm
 
     rosrun xacro xacro --inorder src/mbzirc_gazebo/worlds/kentland_farm.world.xacro > src/mbzirc_gazebo/worlds/kentland_farm.world

@@ -1,32 +1,9 @@
 <?xml version="1.0" ?>
 <launch>
-  <arg name="start_x1" default="50.0" />
-  <arg name="start_y1" default="-17.0" />
-  <arg name="start_x2" default="47.0" />
-  <arg name="start_y2" default="-17.0" />
-  <arg name="start_x3" default="44.0" />
-  <arg name="start_y3" default="-17.0" />
-
   <!-- Launch arena -->
-  <include file="$(find mbzirc_gazebo)/launch/arena.launch" />
+  <include file="$(find mbzirc_gazebo)/launch/support/arena.launch" />
 
-  <node name="environment_3" pkg="mbzirc_gazebo" type="environment_manager_3.py" output="screen" args="107 53.5 10 10 3" />
-
-  <!-- Launch UAVs -->
-  <include file="$(find mbzirc_gazebo)/launch/uav.launch">
-    <arg name="name" value="uav1"/>
-    <arg name="x" value="$(arg start_x1)" />
-    <arg name="y" value="$(arg start_y1)" />
-  </include>
-  <include file="$(find mbzirc_gazebo)/launch/uav.launch">
-    <arg name="name" value="uav2"/>
-    <arg name="x" value="$(arg start_x2)" />
-    <arg name="y" value="$(arg start_y2)" />
-  </include>
-  <include file="$(find mbzirc_gazebo)/launch/uav.launch">
-    <arg name="name" value="uav3"/>
-    <arg name="x" value="$(arg start_x3)" />
-    <arg name="y" value="$(arg start_y3)" />
-  </include>
+  <!-- Launch models -->
+  <include file="$(find mbzirc_gazebo)/launch/support/challenge_3_models.launch" />
 
 </launch>
