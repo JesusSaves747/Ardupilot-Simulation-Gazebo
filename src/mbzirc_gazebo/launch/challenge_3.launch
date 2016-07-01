@@ -1,22 +1,32 @@
 <?xml version="1.0" ?>
 <launch>
+  <arg name="start_x1" default="50.0" />
+  <arg name="start_y1" default="-17.0" />
+  <arg name="start_x2" default="47.0" />
+  <arg name="start_y2" default="-17.0" />
+  <arg name="start_x3" default="44.0" />
+  <arg name="start_y3" default="-17.0" />
+
   <!-- Launch arena -->
   <include file="$(find mbzirc_gazebo)/launch/arena.launch" />
 
   <node name="environment_3" pkg="mbzirc_gazebo" type="environment_manager_3.py" output="screen" args="107 53.5 10 10 3" />
 
-  <!-- Spawn simulated quadrotor UAVs -->
-  <!-- <include file="$(find mbzirc_gazebo)/launch/spawn_uavs.launch" /> -->
-
-  <!-- <node name="image_view_bottom1" pkg="image_view" type="image_view" args="image:=/uav1/downward_cam/camera/image" />
-  <node name="image_view_bottom2" pkg="image_view" type="image_view" args="image:=/uav2/downward_cam/camera/image" />
-  <node name="image_view_bottom3" pkg="image_view" type="image_view" args="image:=/uav3/downward_cam/camera/image" /> -->
-
-  <!-- <node name="target_detection_uav1" pkg="target_detection" type="image_converter" args="/uav1/downward_cam/camera/image" output="screen" />
-  <node name="target_detection_uav2" pkg="target_detection" type="image_converter" args="/uav2/downward_cam/camera/image" output="screen" />
-  <node name="target_detection_uav3" pkg="target_detection" type="image_converter" args="/uav3/downward_cam/camera/image" output="screen" />
-  <node name="mimic_commands" pkg="collaborative_control" type="mimic_commands.py" />
-
-  <node name="object_localizer" pkg="object_localization" type="localize.py" output="screen" /> -->
+  <!-- Launch UAVs -->
+  <include file="$(find mbzirc_gazebo)/launch/uav.launch">
+    <arg name="name" value="uav1"/>
+    <arg name="x" value="$(arg start_x1)" />
+    <arg name="y" value="$(arg start_y1)" />
+  </include>
+  <include file="$(find mbzirc_gazebo)/launch/uav.launch">
+    <arg name="name" value="uav2"/>
+    <arg name="x" value="$(arg start_x2)" />
+    <arg name="y" value="$(arg start_y2)" />
+  </include>
+  <include file="$(find mbzirc_gazebo)/launch/uav.launch">
+    <arg name="name" value="uav3"/>
+    <arg name="x" value="$(arg start_x3)" />
+    <arg name="y" value="$(arg start_y3)" />
+  </include>
 
 </launch>

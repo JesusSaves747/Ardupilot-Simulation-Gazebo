@@ -11,6 +11,9 @@ This repository contains all the ROS source code developed for the [MBZIRC](http
 
 ## Installation Instructions:
 
+    # Add this to your .bashrc file
+    export GAZEBO_MODEL_PATH=<absolute_path_to_cmsvt_mbzirc_project>/src/mbzirc_gazebo/models
+
 ## Build Worlds
 
     rosrun xacro xacro --inorder src/mbzirc_gazebo/worlds/mbzirc_arena.world.xacro > src/mbzirc_gazebo/worlds/mbzirc_arena.world
