@@ -18,6 +18,8 @@
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
+
+
       <visual name='visual'>
         <pose frame=''>0 0 0 0 0 0</pose>
         <geometry>
@@ -43,6 +45,8 @@
         <cast_shadows>1</cast_shadows>
         <transparency>0</transparency>
       </visual>
+
+      
       <collision name='collision'>
         <laser_retro>0</laser_retro>
         <max_contacts>10</max_contacts>

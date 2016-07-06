@@ -1,0 +1,8 @@
+prefix=/home/savio/Documents/cmsvt_mbzirc/devel_isolated/low_level_control
+
+Name: low_level_control
+Description: Description of low_level_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/savio/Documents/cmsvt_mbzirc/devel_isolated/low_level_control/lib 
+Requires: 

@@ -18,6 +18,9 @@
       </attenuation>
       <direction>-0.5 0.5 -1</direction>
     </light>
+    <include>
+      <uri>model://iris</uri>
+    </include>
     <model name="ground_plane">
       <static>1</static>
       <link name="link">
@@ -55,8 +58,8 @@
           </geometry>
           <material>
             <script>
-              <uri>/home/mickey/SourceCode/cmsvt_mbzirc/src/mbzirc_gazebo/worlds/materials/scripts</uri>
-              <uri>/home/mickey/SourceCode/cmsvt_mbzirc/src/mbzirc_gazebo/worlds/materials/textures</uri>
+              <uri>/home/savio/Documents/cmsvt_mbzirc/src/mbzirc_gazebo/worlds/materials/scripts</uri>
+              <uri>/home/savio/Documents/cmsvt_mbzirc/src/mbzirc_gazebo/worlds/materials/textures</uri>
               <name>KentlandFarmGround/Image</name>
             </script>
           </material>
@@ -1096,4 +1099,3 @@
     </gui>
   </world>
 </sdf>
-

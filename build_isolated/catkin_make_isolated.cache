@@ -1,0 +1,2 @@
+Firmware:low_level_control:mbzirc_gazebo
+-G Unix Makefiles -DCATKIN_DEVEL_PREFIX=/home/savio/Documents/cmsvt_mbzirc/devel_isolated -DCMAKE_INSTALL_PREFIX=/home/savio/Documents/cmsvt_mbzirc/install_isolated
