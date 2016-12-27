@@ -187,6 +187,6 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(offb_node src/setPos.cpp)
+add_executable(offb_node src/enableOffB.cpp)
 target_link_libraries(offb_node ${catkin_LIBRARIES})
 add_dependencies(offb_node low_level_control_generate_messages_cpp)

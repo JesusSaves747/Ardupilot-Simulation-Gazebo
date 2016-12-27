@@ -6,4 +6,6 @@
   <!-- Launch models -->
   <include file="$(find mbzirc_gazebo)/launch/support/challenge_3_models.launch" />
 
+  
+
 </launch>

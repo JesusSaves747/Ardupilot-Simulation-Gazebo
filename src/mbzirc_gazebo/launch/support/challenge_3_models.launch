@@ -14,12 +14,18 @@
     <arg name="name" value="uav3a"/>
     <arg name="x" value="$(arg start_x1)" />
     <arg name="y" value="$(arg start_y1)" />
+
+  <include file="$(find px4)/launch/mavros_posix_sitl.launch" />
+
   </include>
   <include file="$(find mbzirc_gazebo)/launch/support/robot.launch">
     <arg name="name" value="uav3b"/>
     <arg name="x" value="$(arg start_x2)" />
     <arg name="y" value="$(arg start_y2)" />
   </include>
+
+  <include file="$(find px4)/launch/mavros_posix_sitl.launch" />
+
   <include file="$(find mbzirc_gazebo)/launch/support/robot.launch">
     <arg name="name" value="uav3c"/>
     <arg name="x" value="$(arg start_x3)" />

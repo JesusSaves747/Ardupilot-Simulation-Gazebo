@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
 <launch>
   <arg name="name" default="uav" />
-  <arg name="model" default="$(find mbzirc_gazebo)/models/hexacopter/model.sdf" />
+  <arg name="model" default="/home/savio/Documents/cmsvt_mbzirc/src/sitl_gazebo/models/iris/iris.sdf" />
+  <!--<arg name="model" default="$(find mbzirc_gazebo)/models/hexacopter/model.sdf" />-->
   <arg name="x" default="0" />
   <arg name="y" default="0" />
   <arg name="z" default="0" />
